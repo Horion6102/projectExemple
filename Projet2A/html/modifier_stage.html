@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/creer_stage.css">
+    <title>Modifier un Stage</title>
+</head>
+<body>
+    <div class="global">
+        <div class="div-global">
+            <div class="div-titre">
+                <h1>Modification du Stage</h1>
+            </div>
+            <div class="div-form">
+                <form method="post">
+                    <label for="TitreStage">Titre Du Stage : </label>
+                    <input type="text" name="TitreStage" id="TitreStage" value="<?php echo($Stage->getTitreStage());?>" required>
+                    <label for="DescriptionStage">Description Du Stage : </label>
+                    <textarea name="DescriptionStage" id="DescriptionStage" required><?php echo($Stage->getDescription());?></textarea>
+                    <?php inputLanguage($nbrlanguage, $ListeLanguage, $nbrlanguageStage); ?>
+                    <button class="button" type="submit" name="AjouterLanguage" >Ajouter un langage</button>
+                    <button class="button" type="submit" name="RetirerLanguage" >Retirer un langage</button>
+                    <input type="hidden" name="nbrLanguage" value="<?php echo $nbrlanguage?>">
+                    <div class="div-column">
+                        <div>
+                            <label for="EntrepriseStage">Siren de l'Entreprise :</label>
+                            <input type="number" name="EntrepriseStage" id="EntrepriseStage" value="<?php echo($Entreprise->getSiren());?>">                        </div>
+                        <div>
+                            <label for="SiteStage">Siret du lieu du stage :</label>
+                            <input type="number" name="SiteStage" id ="SiteStage" value="<?php echo($Stage->getSiretSiteReel()); ?>">                        </div>
+                    </div>
+                    <label for="RemunerationStage">Rémuneration du Stage :</label>
+                    <input type="number" name="RemunerationStage" id="RemunerationStage" value="<?php echo($Stage->getGratification());?>" required>
+                    <label for="AuteurStage">Auteur du Stage :</label>
+                    <input type="text" name="AuteurStage" id="AuteurStage" value="<?php echo($Stage->getAuteurStage());?>" required>
+                    <div class="div-column">
+                        <div>
+                            <label for="NumeroDeTelephone">Numéro de téléphone :</label>
+                            <input type="number" name="NumeroDeTelephone" id="NumeroDeTelephone" value="<?php echo($Stage->getNumeroTelephone());?>" required>
+                        </div>
+                        <div>
+                            <label for="EmailStage">Email du Stage :</label>
+                            <input type="email" name="EmailStage" id="EmailStage" value="<?php echo($Stage->getMailContact());?>" required>
+                        </div>
+                    </div>
+                    <p><?php if(isset($erreur)) echo $erreur;?></p>
+                    <input type="hidden" name="IdentifiantStage" value="<?php echo($Stage->getIdentifiantStage());?>">
+                    <button class="button" type="submit" name="soumettreStage" onclick="confirmationEtActualisation('modifier');">Soumettre</button>
+                    <button class="retour" type="submit" name="retour">Retour</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</body>
+</html>

@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --footer-color-secondary : #00c3ff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+    background-color: var(--footer-color-secondary);
+    display: flex;
+    flex-direction: row;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    width: 90%;
+}
+
+.sec-head {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: calc(100vh - 50px);
+    background-color: white;
+    margin-left: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgb(26, 26, 26);
+    text-align: center;
+    align-items: center;
+}
+
+.row .left {
+    font-weight: 600;
+}
+
+.row-button {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 90%;
+}
+
+.sec-head a {
+    justify-content: center;
+    text-align: center;
+    background-color: #dbdbdb;
+    width: 40%;
+    font-weight: 600;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: black;
+    transition: all 250ms ease-in-out;
+}
+
+.left-a:hover {
+    background-color: var(--footer-color-secondary);
+}
+
+.right-a:hover {
+    background-color: rgb(255, 184, 184);
+}
+
+.sec-head .left-a {
+    margin-right: 5%;
+}
+
+.sec-body {
+    width: 80%;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 25px;
+    height: calc(100vh - 100px);
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgb(26, 26, 26);
+    text-align: center;
+    align-items: center;
+}
+
+.sec-body table {
+    width: 100%;
+}
+
+a {
+    color: var(--footer-color-secondary);
+    transition: all 150ms ease-in;
+}
+
+a:hover {
+    color: black;
+    cursor: pointer;
+}
+
+
+

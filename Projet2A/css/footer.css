@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --footer-color-text : rgb(204, 204, 204);
+    --footer-color-secondary : #00c3ff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+}
+
+footer {
+    background-color: rgb(36, 36, 36);
+    color: var(--footer-color-text);
+    display: flex;
+    margin-top: 100px;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+/* =========== */
+
+.div-left {
+    display: block;
+    width: 30%;
+    text-align: center;
+    transition: all 150ms ease-in;
+}
+
+.div-left:hover {
+    box-shadow: 
+        inset -3px 0px var(--footer-color-secondary),
+        inset 3px 0px var(--footer-color-secondary);
+}
+
+.div-left-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.div-left-text h3 {
+    margin: 0;
+    margin-bottom: 10px;
+    color: white;
+    transition: all 150ms ease-in;
+}
+
+.div-left-text h3:hover {
+    color: var(--footer-color-secondary);
+}
+
+.div-left-text a {
+    color: var(--footer-color-text);
+    margin:auto;
+    margin-bottom: 5px;
+    text-align: center;
+    width: 45%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    transition: all 100ms ease-in;
+}
+
+.div-left-text a:hover {
+    cursor: default;
+    background-color: rgb(51, 51, 51);
+    color: var(--footer-color-secondary);
+    border-radius: 20px;
+}
+
+/* =========== */
+
+.div-center {
+    display: block;
+    width: 30%;
+    text-align: center;
+    padding-top: 35px;
+    transition: all 150ms ease-in;
+}
+
+.div-center:hover {
+    color: white;
+    box-shadow: 
+        inset -3px 0px var(--footer-color-secondary),
+        inset 3px 0px var(--footer-color-secondary);
+}
+
+.div-center-text {
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========== */
+
+.div-right {
+    display: block;
+    width: 30%;
+    text-align: center;
+    transition: all 150ms ease-in;
+}
+
+.div-right:hover {
+    box-shadow: 
+        inset -3px 0px var(--footer-color-secondary),
+        inset 3px 0px var(--footer-color-secondary);
+}
+
+.div-right-text {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.div-right-text a {
+    color: var(--footer-color-text);
+    margin:auto;
+    margin-bottom: 5px;
+    text-align: center;
+    width: 80%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    transition: all 100ms ease-in;
+}
+
+.div-right-text a:hover {
+    background-color: rgb(51, 51, 51);
+    color: var(--footer-color-secondary);
+    border-radius: 20px;
+}
+
+.div-right-text img {
+    color: var(--footer-color-text);
+    margin:auto;
+    margin-bottom: 5px;
+    text-align: center;
+    padding-bottom: 3px;
+    transition: all 100ms ease-in;
+}

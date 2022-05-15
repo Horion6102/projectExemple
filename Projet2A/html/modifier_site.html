@@ -1,0 +1,22 @@
+<header>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/modifier_entreprise.css">
+    <title>Modifier un site</title>
+</header>
+<div class="global">
+    <div class="div-global">
+        <div class="div-titre">
+            <h1>Modification d'un site</h1>
+        </div>
+        <div class="div-form">
+            <form method="post">
+                <label for="MailSite"> Mail du site :</label>
+                <input type="email" name="MailSite" placeholder="mailDuSite@mail.com" value="<?php echo $mailSite ?>">
+                <p><?php if(isset($messageErreur)) echo $messageErreur;?></p>
+                <button class="button" type="submit" name="Soumettre">Soumettre</button>
+                <button class="retour" type="submit" name="retour">Retour</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="../js/utils.js"></script>

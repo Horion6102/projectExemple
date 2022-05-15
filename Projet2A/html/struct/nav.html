@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/nav.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="div-nav">
+        <div class="div-nav-left">
+            <a href="../../php/listStages.php"><h2>PropStage</h2></a>
+        </div>
+        <div class="div-nav-right">
+            <?php echo getMenu($role) ?>
+            <a href="../../php/auth/logout.php" class="div-nav-right-deco"><?php echo "$nom $prenom" ?></a>
+
+        </div>
+    </div>
+    <script type="text/javascript" src="../../js/nav.js"></script>
+</body>
+</html>

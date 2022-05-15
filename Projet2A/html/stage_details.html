@@ -1,0 +1,42 @@
+<head>
+    <link rel="stylesheet" href="../css/stage_details.css">
+</head>
+<body>
+    <div class="div-demande">
+        <h4>Une demande d'ajout de stage sur la plateforme a été faite par <?=$stage->getAuteurStage();?>. Vous devez l'approuver pour que cette offre de stage devienne disponible aux étudiants. Si vous ne souhaitez pas proposer cette offre, vous pouvez cliquer sur refuser.</h1>
+        <div class="div-demande-details">
+            <h3>Détails de la demande :</h3>
+            <div class="table2x1">
+                <div class="left">
+                    <p><b>Titre :</b> <?=$stage->getTitreStage()?></p
+                    <p><b>Description :</b> <?=$stage->getDescription();?></p>
+                    <p><b>Publié le :</b> <?=$stage->getDatePublication($stage->getIdentifiantStage());?></p>
+                    <p><b>Auteur :</b> <?=$stage->getAuteurStage();?></p>
+                </div>
+                <div class="right">
+                    <p><b>Langages :</b>
+                        <?php
+						$listeLanguage = $stage->getLanguageStage();
+						foreach($listeLanguage as $language) {
+                            echo $language.", ";
+                        } ?>
+                    </p>
+                    <p><b>Gratification :</b> <?=$stage->getGratification();?></p>
+                    <p><b>Numéro de téléphone :</b> <?=$stage->getNumeroTelephone();?></p>
+                    <p><b>Mail :</b> <?=$stage->getMailContact();?></p>
+                    <p><b>Siret :</b> <?=$stage->getSiretSiteReel();?></p>
+                </div>
+            </div>
+            <div class="row">
+                <?php   $cur_url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                    echo "<a class='button' href='$cur_url&action=accept'>";
+                    echo "Accepter";
+                    echo "</a>";
+                    echo "<a class='button' href='$cur_url&action=deny'>";
+                    echo "Refuser";
+                    echo "</a>";
+                ?>
+            </div>
+        </div>
+    </div>
+</body>

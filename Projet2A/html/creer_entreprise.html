@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/creer_entreprise.css">
+</head>
+<body>
+    <div class="global">
+        <div class="div-global">
+            <div class="div-titre">
+                <h1>Création d'une Entreprise</h1>
+            </div>
+            <div class="div-form">
+                <form method="post">
+                    <label for="sirenEntreprise">Siren de l'entreprise: </label>
+                    <input type="text" name="sirenEntreprise" id ="sirenEntreprise" placeholder="Siren" value="<?php if (isset($_POST['sirenEntreprise'])) echo $_POST['sirenEntreprise'];?>">
+                    <label for="MailEntreprise">Mail de l'entreprise :</label>
+                    <input type="email" name="MailEntreprise" id ="MailEntreprise" placeholder="Mail de l'entreprise" value="<?php if (isset($_POST['MailEntreprise'])) echo $_POST['MailEntreprise'];?>">
+                    <?php include_once "./../html/form_Site.html" ?>
+                    <p><?php if(isset($messageErreur)) echo $messageErreur;?></p>
+                    <button class="button" type="submit">Soumettre</button>
+                    <button class="retour" type="submit" name="retour">Retour</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/utils.js"></script>
+</html>

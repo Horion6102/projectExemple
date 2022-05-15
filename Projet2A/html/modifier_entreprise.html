@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/modifier_entreprise.css">
+    <title>Modifier une Entreprise</title>
+</head>
+<body>
+<div class="global">
+    <div class="div-global">
+        <div class="div-titre">
+            <h1>Modification d'une entreprise</h1>
+        </div>
+        <div class="div-form">
+            <form method="post">
+                <input type="hidden" name="SirenEntreprise" id="SirenEntreprise" value="<?php echo($Entreprise->getSiren()); ?>">
+                <label for="NomEntreprise">Nom de l'Entreprise : </label>
+                <input type="text" name="NomEntreprise" id="NomEntreprise" value="<?php echo($Entreprise->getNomEntreprise());?>">
+                <br>
+                <label for="MailEntreprise">Mail de l'entreprise : </label>
+                <input type="email" name="MailEntreprise" id="MailEntreprise" value="<?php echo($Entreprise->getMail());?>">
+                <br>
+                <p><?php if(isset($messageErreur)) echo $messageErreur;?></p>
+                <button class="button" type="submit" name="Soumettre">Soumettre</button>
+                <a class="retour" href="./listeEntreprises.php">Retour</a>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../js/utils.js"></script>
+</html>

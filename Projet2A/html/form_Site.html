@@ -1,0 +1,235 @@
+<label for="SirenSite">Siret du Site: </label>
+<input type="text" name="Siret" placeholder="SIRET" value="<?php echo $siret; ?>">
+<label for="PaysSite">Pays du Site: </label>
+<select name="PaysSite">
+    <option value="France">France </option>
+    <option value="Afghanistan" <?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Afghanistan") echo "selected";?> >Afghanistan </option>
+    <option value="Afrique_Centrale" <?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Afrique_Centrale") echo "selected";?>>Afrique_Centrale </option>
+    <option value="Afrique_du_sud" <?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Afrique_du_sud") echo "selected";?>>Afrique_du_Sud </option>
+    <option value="Albanie" <?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Albanie") echo "selected";?>>Albanie </option>
+    <option value="Algerie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Algerie") echo "selected";?>>Algerie </option>
+    <option value="Allemagne"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Allemagne") echo "selected";?>>Allemagne </option>
+    <option value="Andorre"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Andorre") echo "selected";?>>Andorre </option>
+    <option value="Angola"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Angola") echo "selected";?>>Angola </option>
+    <option value="Anguilla"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Anguilla") echo "selected";?>>Anguilla </option>
+    <option value="Arabie_Saoudite"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Arabie_Saoudite") echo "selected";?>>Arabie_Saoudite </option>
+    <option value="Argentine"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Argentine") echo "selected";?>>Argentine </option>
+    <option value="Armenie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Armenie") echo "selected";?>>Armenie </option>
+    <option value="Australie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Australie") echo "selected";?>>Australie </option>
+    <option value="Autriche"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Autriche") echo "selected";?>>Autriche </option>
+    <option value="Azerbaidjan"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Azerbaidjan") echo "selected";?>>Azerbaidjan </option>
+    <option value="Bahamas"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Bahamas") echo "selected";?>>Bahamas </option>
+    <option value="Bangladesh"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Bangladesh") echo "selected";?>>Bangladesh </option>
+    <option value="Barbade"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Barbade") echo "selected";?>>Barbade </option>
+    <option value="Bahrein"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Bahrein") echo "selected";?>>Bahrein </option>
+    <option value="Belgique"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Belgique") echo "selected";?>>Belgique </option>
+    <option value="Belize"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Belize") echo "selected";?>>Belize </option>
+    <option value="Benin"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Benin") echo "selected";?>>Benin </option>
+    <option value="Bermudes"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Bermudes") echo "selected";?>>Bermudes </option>
+    <option value="Bielorussie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Bielorussie") echo "selected";?>>Bielorussie </option>
+    <option value="Bolivie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Bolivie") echo "selected";?>>Bolivie </option>
+    <option value="Botswana"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Botswana") echo "selected";?>>Botswana </option>
+    <option value="Bhoutan"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Bhoutan") echo "selected";?>>Bhoutan </option>
+    <option value="Boznie_Herzegovine"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Boznie_Herzegovine") echo "selected";?>>Boznie_Herzegovine </option>
+    <option value="Bresil"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Bresil") echo "selected";?>>Bresil </option>
+    <option value="Brunei"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Brunei") echo "selected";?>>Brunei </option>
+    <option value="Bulgarie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Bulgarie") echo "selected";?>>Bulgarie </option>
+    <option value="Burkina_Faso"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Burkina_Faso") echo "selected";?>>Burkina_Faso </option>
+    <option value="Burundi"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Burundi") echo "selected";?>>Burundi </option>
+    <option value="Caiman"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Caiman") echo "selected";?>>Caiman </option>
+    <option value="Cambodge"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Cambodge") echo "selected";?>>Cambodge </option>
+    <option value="Cameroun"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Cameroun") echo "selected";?>>Cameroun </option>
+    <option value="Canada"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Canada") echo "selected";?>>Canada </option>
+    <option value="Canaries"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Canaries") echo "selected";?>>Canaries </option>
+    <option value="Cap_vert"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Cap_vert") echo "selected";?>>Cap_Vert </option>
+    <option value="Chili"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Chili") echo "selected";?>>Chili </option>
+    <option value="Chine"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Chine") echo "selected";?>>Chine </option>
+    <option value="Chypre"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Chypre") echo "selected";?>>Chypre </option>
+    <option value="Colombie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Colombie") echo "selected";?>>Colombie </option>
+    <option value="Comores"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Comores") echo "selected";?>>Colombie </option>
+    <option value="Congo"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Congo") echo "selected";?>>Congo </option>
+    <option value="Congo_democratique"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Congo_democratique") echo "selected";?>>Congo_democratique </option>
+    <option value="Cook"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Cook") echo "selected";?>>Cook </option>
+    <option value="Coree_du_Nord"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Coree_du_Nord") echo "selected";?>>Coree_du_Nord </option>
+    <option value="Coree_du_Sud"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Coree_du_Sud") echo "selected";?>>Coree_du_Sud </option>
+    <option value="Costa_Rica"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Costa_Rica") echo "selected";?>>Costa_Rica </option>
+    <option value="Cote_d_Ivoire"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Cote_d_Ivoire") echo "selected";?>>Côte_d_Ivoire </option>
+    <option value="Croatie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Croatie") echo "selected";?>>Croatie </option>
+    <option value="Cuba"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Cuba") echo "selected";?>>Cuba </option>
+    <option value="Danemark"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Danemark") echo "selected";?>>Danemark </option>
+    <option value="Djibouti"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Djibouti") echo "selected";?>>Djibouti </option>
+    <option value="Dominique"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Dominique") echo "selected";?>>Dominique </option>
+    <option value="Egypte"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Egypte") echo "selected";?>>Egypte </option>
+    <option value="Emirats_Arabes_Unis"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Emirats_Arabes_Unis") echo "selected";?>>Emirats_Arabes_Unis </option>
+    <option value="Equateur"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Equateur") echo "selected";?>>Equateur </option>
+    <option value="Erythree"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Erythree") echo "selected";?>>Erythree </option>
+    <option value="Espagne"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Espagne") echo "selected";?>>Espagne </option>
+    <option value="Estonie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Estonie") echo "selected";?>>Estonie </option>
+    <option value="Etats_Unis"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Etats_Unis") echo "selected";?>>Etats_Unis </option>
+    <option value="Ethiopie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Ethiopie") echo "selected";?>>Ethiopie </option>
+    <option value="Falkland"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Falkland") echo "selected";?>>Falkland </option>
+    <option value="Feroe"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Feroe") echo "selected";?>>Feroe </option>
+    <option value="Fidji"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Fidji") echo "selected";?>>Fidji </option>
+    <option value="Finlande"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Finlande") echo "selected";?>>Finlande </option>
+    <option value="Gabon"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Gabon") echo "selected";?>>Gabon </option>
+    <option value="Gambie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Gambie") echo "selected";?>>Gambie </option>
+    <option value="Georgie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Georgie") echo "selected";?>>Georgie </option>
+    <option value="Ghana"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Ghana") echo "selected";?>>Ghana </option>
+    <option value="Gibraltar"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Gibraltar") echo "selected";?>>Gibraltar </option>
+    <option value="Grece"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Grece") echo "selected";?>>Grece </option>
+    <option value="Grenade"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Grenade") echo "selected";?>>Grenade </option>
+    <option value="Groenland"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Groenland") echo "selected";?>>Groenland </option>
+    <option value="Guadeloupe"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Guadeloupe") echo "selected";?>>Guadeloupe </option>
+    <option value="Guam"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Guam") echo "selected";?>>Guam </option>
+    <option value="Guatemala"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Guatemala") echo "selected";?>>Guatemala</option>
+    <option value="Guernesey"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Guernesey") echo "selected";?>>Guernesey </option>
+    <option value="Guinee"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Guinee") echo "selected";?>>Guinee </option>
+    <option value="Guinee_Bissau"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Guinee_Bissau") echo "selected";?>>Guinee_Bissau </option>
+    <option value="Guinee equatoriale"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Guinee equatoriale") echo "selected";?>>Guinee_Equatoriale </option>
+    <option value="Guyana"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Guyana") echo "selected";?>>Guyana </option>
+    <option value="Guyane_Francaise"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Guyane_Francaise") echo "selected";?>>Guyane_Francaise </option>
+    <option value="Haiti"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Haiti") echo "selected";?>>Haiti </option>
+    <option value="Hawaii"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Hawaii") echo "selected";?>>Hawaii </option>
+    <option value="Honduras"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Honduras") echo "selected";?>>Honduras </option>
+    <option value="Hong_Kong"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Hong_Kong") echo "selected";?>>Hong_Kong </option>
+    <option value="Hongrie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Hongrie") echo "selected";?>>Hongrie </option>
+    <option value="Inde"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Inde") echo "selected";?>>Inde </option>
+    <option value="Indonesie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Indonesie") echo "selected";?>>Indonesie </option>
+    <option value="Iran"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Iran") echo "selected";?>>Iran </option>
+    <option value="Iraq"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Iraq") echo "selected";?>>Iraq </option>
+    <option value="Irlande"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Irlande") echo "selected";?>>Irlande </option>
+    <option value="Islande"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Islande") echo "selected";?>>Islande </option>
+    <option value="Israel"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Israel") echo "selected";?>>Israel </option>
+    <option value="Italie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Italie") echo "selected";?>>italie </option>
+    <option value="Jamaique"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Jamaique") echo "selected";?>>Jamaique </option>
+    <option value="Jan Mayen"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Jan Mayen") echo "selected";?>>Jan Mayen </option>
+    <option value="Japon"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Japon") echo "selected";?>>Japon </option>
+    <option value="Jersey"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Jersey") echo "selected";?>>Jersey </option>
+    <option value="Jordanie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Jordanie") echo "selected";?>>Jordanie </option>
+    <option value="Kazakhstan"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Kazakhstan") echo "selected";?>>Kazakhstan </option>
+    <option value="Kenya"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Kenya") echo "selected";?>>Kenya </option>
+    <option value="Kirghizstan"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Kirghizstan") echo "selected";?>>Kirghizistan </option>
+    <option value="Kiribati"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Kiribati") echo "selected";?>>Kiribati </option>
+    <option value="Koweit"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Koweit") echo "selected";?>>Koweit </option>
+    <option value="Laos"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Laos") echo "selected";?>>Laos </option>
+    <option value="Lesotho"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Lesotho") echo "selected";?>>Lesotho </option>
+    <option value="Lettonie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Lettonie") echo "selected";?>>Lettonie </option>
+    <option value="Liban"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Liban") echo "selected";?>>Liban </option>
+    <option value="Liberia"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Liberia") echo "selected";?>>Liberia </option>
+    <option value="Liechtenstein"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Liechtenstein") echo "selected";?>>Liechtenstein </option>
+    <option value="Lituanie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Lituanie") echo "selected";?>>Lituanie </option>
+    <option value="Luxembourg"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Luxembourg") echo "selected";?>>Luxembourg </option>
+    <option value="Lybie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Lybie") echo "selected";?>>Lybie </option>
+    <option value="Macao"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Macao") echo "selected";?>>Macao </option>
+    <option value="Macedoine"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Macedoine") echo "selected";?>>Macedoine </option>
+    <option value="Madagascar"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Madagascar") echo "selected";?>>Madagascar </option>
+    <option value="Madère"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Madère") echo "selected";?>>Madère </option>
+    <option value="Malaisie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Malaisie") echo "selected";?>>Malaisie </option>
+    <option value="Malawi"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Malawi") echo "selected";?>>Malawi </option>
+    <option value="Maldives"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Maldives") echo "selected";?>>Maldives </option>
+    <option value="Mali"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Mali") echo "selected";?>>Mali </option>
+    <option value="Malte"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Malte") echo "selected";?>>Malte </option>
+    <option value="Man"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Man") echo "selected";?>>Man </option>
+    <option value="Mariannes du Nord"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Mariannes du Nord") echo "selected";?>>Mariannes du Nord </option>
+    <option value="Maroc"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Maroc") echo "selected";?>>Maroc </option>
+    <option value="Marshall"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Marshall") echo "selected";?>>Marshall </option>
+    <option value="Martinique"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Martinique") echo "selected";?>>Martinique </option>
+    <option value="Maurice"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Maurice") echo "selected";?>>Maurice </option>
+    <option value="Mauritanie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Mauritanie") echo "selected";?>>Mauritanie </option>
+    <option value="Mayotte"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Mayotte") echo "selected";?>>Mayotte </option>
+    <option value="Mexique"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Mexique") echo "selected";?>>Mexique </option>
+    <option value="Micronesie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Micronesie") echo "selected";?>>Micronesie </option>
+    <option value="Midway"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Midway") echo "selected";?>>Midway </option>
+    <option value="Moldavie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Moldavie") echo "selected";?>>Moldavie </option>
+    <option value="Monaco"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Monaco") echo "selected";?>>Monaco </option>
+    <option value="Mongolie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Mongolie") echo "selected";?>>Mongolie </option>
+    <option value="Montserrat"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Montserrat") echo "selected";?>>Montserrat </option>
+    <option value="Mozambique"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Mozambique") echo "selected";?>>Mozambique </option>
+    <option value="Namibie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Namibie") echo "selected";?>>Namibie </option>
+    <option value="Nauru"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Nauru") echo "selected";?>>Nauru </option>
+    <option value="Nepal"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Nepal") echo "selected";?>>Nepal </option>
+    <option value="Nicaragua"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Nicaragua") echo "selected";?>>Nicaragua </option>
+    <option value="Niger"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Niger") echo "selected";?>>Niger </option>
+    <option value="Nigeria"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Nigeria") echo "selected";?>>Nigeria </option>
+    <option value="Niue"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Niue") echo "selected";?>>Niue </option>
+    <option value="Norfolk"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Norfolk") echo "selected";?>>Norfolk </option>
+    <option value="Norvege"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Norvege") echo "selected";?>>Norvege </option>
+    <option value="Nouvelle_Caledonie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Nouvelle_Caledonie") echo "selected";?>>Nouvelle_Caledonie </option>
+    <option value="Nouvelle_Zelande"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Nouvelle_Zelande") echo "selected";?>>Nouvelle_Zelande </option>
+    <option value="Oman"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Oman") echo "selected";?>>Oman </option>
+    <option value="Ouganda"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Ouganda") echo "selected";?>>Ouganda </option>
+    <option value="Ouzbekistan"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Ouzbekistan") echo "selected";?>>Ouzbekistan </option>
+    <option value="Pakistan"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Pakistan") echo "selected";?>>Pakistan </option>
+    <option value="Palau"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Palau") echo "selected";?>>Palau </option>
+    <option value="Palestine"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Palestine") echo "selected";?>>Palestine </option>
+    <option value="Panama"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Panama") echo "selected";?>>Panama </option>
+    <option value="Papouasie_Nouvelle_Guinee"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Papouasie_Nouvelle_Guinee") echo "selected";?>>Papouasie_Nouvelle_Guinee </option>
+    <option value="Paraguay"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Paraguay") echo "selected";?>>Paraguay </option>
+    <option value="Pays_Bas"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Pays_Bas") echo "selected";?>>Pays_Bas </option>
+    <option value="Perou"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Perou") echo "selected";?>>Perou </option>
+    <option value="Philippines"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Philippines") echo "selected";?>>Philippines </option>
+    <option value="Pologne"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Pologne") echo "selected";?>>Pologne </option>
+    <option value="Polynesie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Polynesie") echo "selected";?>>Polynesie </option>
+    <option value="Porto_Rico"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Porto_Rico") echo "selected";?>>Porto_Rico </option>
+    <option value="Portugal"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Portugal") echo "selected";?>>Portugal </option>
+    <option value="Qatar"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Qatar") echo "selected";?>>Qatar </option>
+    <option value="Republique_Dominicaine"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Republique_Dominicaine") echo "selected";?>>Republique_Dominicaine </option>
+    <option value="Republique_Tcheque"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Republique_Tcheque") echo "selected";?>>Republique_Tcheque </option>
+    <option value="Reunion"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Reunion") echo "selected";?>>Reunion </option>
+    <option value="Roumanie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Roumanie") echo "selected";?>>Roumanie </option>
+    <option value="Royaume_Uni"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Royaume_Uni") echo "selected";?>>Royaume_Uni </option>
+    <option value="Russie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Russie") echo "selected";?>>Russie </option>
+    <option value="Rwanda"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Rwanda") echo "selected";?>>Rwanda </option>
+    <option value="Sahara Occidental"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Sahara Occidental") echo "selected";?>>Sahara Occidental </option>
+    <option value="Sainte_Lucie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Sainte_Lucie") echo "selected";?>>Sainte_Lucie </option>
+    <option value="Saint_Marin"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Saint_Marin") echo "selected";?>>Saint_Marin </option>
+    <option value="Salomon"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Salomon") echo "selected";?>>Salomon </option>
+    <option value="Salvador"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Salvador") echo "selected";?>>Salvador </option>
+    <option value="Samoa_Occidentales"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Samoa_Occidentales") echo "selected";?>>Samoa_Occidentales</option>
+    <option value="Samoa_Americaine"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Samoa_Americaine") echo "selected";?>>Samoa_Americaine </option>
+    <option value="Sao_Tome_et_Principe"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Sao_Tome_et_Principe") echo "selected";?>>Sao_Tome_et_Principe </option>
+    <option value="Senegal"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Senegal") echo "selected";?>>Senegal </option>
+    <option value="Seychelles"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Seychelles") echo "selected";?>>Seychelles </option>
+    <option value="Sierra Leone"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Sierra Leone") echo "selected";?>>Sierra Leone </option>
+    <option value="Singapour"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Singapour") echo "selected";?>>Singapour </option>
+    <option value="Slovaquie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Slovaquie") echo "selected";?>>Slovaquie </option>
+    <option value="Slovenie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Slovenie") echo "selected";?>>Slovenie</option>
+    <option value="Somalie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Somalie") echo "selected";?>>Somalie </option>
+    <option value="Soudan"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Soudan") echo "selected";?>>Soudan </option>
+    <option value="Sri_Lanka"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Sri_Lanka") echo "selected";?>>Sri_Lanka </option>
+    <option value="Suede"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Suede") echo "selected";?>>Suede </option>
+    <option value="Suisse"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Suisse") echo "selected";?>>Suisse </option>
+    <option value="Surinam"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Surinam") echo "selected";?>>Surinam </option>
+    <option value="Swaziland"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Swaziland") echo "selected";?>>Swaziland </option>
+    <option value="Syrie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Syrie") echo "selected";?>>Syrie </option>
+    <option value="Tadjikistan"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Tadjikistan") echo "selected";?>>Tadjikistan </option>
+    <option value="Taiwan"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Taiwan") echo "selected";?>>Taiwan </option>
+    <option value="Tonga"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Tonga") echo "selected";?>>Tonga </option>
+    <option value="Tanzanie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Tanzanie") echo "selected";?>>Tanzanie </option>
+    <option value="Tchad"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Tchad") echo "selected";?>>Tchad </option>
+    <option value="Thailande"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Thailande") echo "selected";?>>Thailande </option>
+    <option value="Tibet"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Tibet") echo "selected";?>>Tibet </option>
+    <option value="Timor_Oriental"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Timor_Oriental") echo "selected";?>>Timor_Oriental </option>
+    <option value="Togo"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Togo") echo "selected";?>>Togo </option>
+    <option value="Trinite_et_Tobago"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Trinite_et_Tobago") echo "selected";?>>Trinite_et_Tobago </option>
+    <option value="Tristan da cunha"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Tristan da cunha") echo "selected";?>>Tristan de cuncha </option>
+    <option value="Tunisie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Tunisie") echo "selected";?>>Tunisie </option>
+    <option value="Turkmenistan"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Turkmenistan") echo "selected";?>>Turmenistan </option>
+    <option value="Turquie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Turquie") echo "selected";?>>Turquie </option>
+    <option value="Ukraine"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Ukraine") echo "selected";?>>Ukraine </option>
+    <option value="Uruguay"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Uruguay") echo "selected";?>>Uruguay </option>
+    <option value="Vanuatu"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Vanuatu") echo "selected";?>>Vanuatu </option>
+    <option value="Vatican"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Vatican") echo "selected";?>>Vatican </option>
+    <option value="Venezuela"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Venezuela") echo "selected";?>>Venezuela </option>
+    <option value="Vierges_Americaines"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Vierges_Americaines") echo "selected";?>>Vierges_Americaines </option>
+    <option value="Vierges_Britanniques"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Vierges_Britanniques") echo "selected";?>>Vierges_Britanniques </option>
+    <option value="Vietnam"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Vietnam") echo "selected";?>>Vietnam </option>
+    <option value="Wake"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Wake") echo "selected";?>>Wake </option>
+    <option value="Wallis et Futuma"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Wallis et Futuma") echo "selected";?>>Wallis et Futuma </option>
+    <option value="Yemen"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Yemen") echo "selected";?>>Yemen </option>
+    <option value="Yougoslavie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Yougoslavie") echo "selected";?>>Yougoslavie </option>
+    <option value="Zambie"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Zambie") echo "selected";?>>Zambie </option>
+    <option value="Zimbabwe"<?php if(isset($_POST["PaysSite"]) and $_POST["PaysSite"] == "Zimbabwe") echo "selected";?>>Zimbabwe </option>
+</select>
+<label for="MailSite" >Mail du Site: </label>
+<input type="email" name="MailSite" placeholder="mailDuSite@mail.com" value="<?php if (isset($_POST['MailSite'])) echo $_POST['MailSite'];?>">

@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --footer-color-secondary : #00c3ff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+    background-color: var(--footer-color-secondary);
+}
+
+.global {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.retour {
+    margin: auto;
+    margin-top: 20px;
+    color: black;
+    text-align: center;
+    text-decoration: underline;
+    background: none;
+    width: 40%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    font-size: 0.95em;
+    border-radius: 25px;
+    transition: all 250ms ease-in-out;
+}
+
+.retour:hover {
+    cursor: pointer;
+    color: rgb(194, 0, 0);
+    background-color: #f8f8f8;
+}
+
+.div-global {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: fit-content;
+    width: 600px;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.692);
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: all 150ms ease-in;
+}
+
+.div-form {
+    width: 70%;
+    overflow: auto;
+}
+
+.div-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.div-form form label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.div-form form input {
+    border: none;
+    background-color: #dbdbdb;
+    border-radius: 15px;
+    height: 35px;
+    outline: none;
+    padding-left: 10px;
+}
+
+.div-form form input[type=number] {
+    margin: 0;
+}
+
+.div-form textarea {
+    font-family: "Roboto";
+    resize: none;
+    height: 100px;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    background-color: #dbdbdb;
+    padding: 10px
+}
+
+.div-form form .button {
+    margin: auto;
+    margin-top: 20px;
+    width: 50%;
+    height: 45px;
+    background-color: #dbdbdb;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: 600;
+    transition: all 150ms ease-in;
+    font-family: "Roboto";
+    font-size: 1em;
+}
+
+.div-form .button:hover {
+    background-color: var(--footer-color-secondary);
+    cursor: pointer;
+}
+
+.div-form form input:-internal-autofill-selected {
+    background-color: black;
+}
+
+a {
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    text-decoration: none;
+    color: black;
+    text-decoration: underline;
+    width: 40%;
+    height: 20px;
+    transition: 200ms ease-in;
+    border-radius: 15px;
+}
+
+a:hover {
+    color: var(--footer-color-secondary);
+    background-color: #f8f8f8;
+}
+
+select {
+    height: 37px;
+    border-radius: 15px;
+    background-color: #dbdbdb;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+
+.div-column {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

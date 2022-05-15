@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/entreprise.css">
+    <title>Stage / Site</title>
+</head>
+<script src="../js/utils.js"></script>
+<body>
+    <section class="sec-head">
+        <h3>Infos entreprise</h3>
+        <div class="row">
+            <p class="left">Nom site :&nbsp</p><p class="center"><?php echo $nomSite ?></p>
+        </div>
+        <hr>
+        <div class="row-button">
+            <?php
+            echo "<a class='left-a' href=\"creer_stage.php?id=$siret\">Créer Stage</a>";
+            echo "<a class='right-a' name='retour'  href=\"entreprise.php?id=$siren\">Retour</a>";
+            if(!isset($_SESSION['role'])){
+                echo '<a class="right-a" href="connexionEntreprise.php">Deconnexion</a>';
+            }
+            ?>
+        </div>
+    </section>
+    <section class="sec-body">
+    <form method="post">
+        <table style="width:100%">
+            <br>
+            <tr>
+                <th>Titre</th>
+                <th>Auteur</th>
+                <th>Gratification</th>
+                <th>Adresse</th>
+                <th>Code Postal</th>
+                <th>Pays</th>
+            </tr>
+            <?php
+            foreach ($listeStage as $a){
+                $identifiantStage = $a->getIdentifiantStage();
+                $titreStage = $a->getTitreStage();
+                $auteurStage = $a->getAuteurStage();
+                $gratification = $a->getGratification();
+                $Site = Site::getSiteParId($a->getIdentifiantSiteStage());
+                $adresseSite = $Site->getRue();
+                $codePostalSite = $Site->getCodePostal();
+                $PaysSite = $Site->getPays();
+                echo "<tr>";
+                echo "<td>$titreStage</td>";
+                echo "<td>$auteurStage</td>";
+                echo "<td>$gratification</td>";
+                echo "<td>$adresseSite</td>";
+                echo "<td>$codePostalSite</td>";
+                echo "<td>$PaysSite</td>";
+                echo "<td><a href=\"modifier_stage.php?id=$identifiantStage\">Modifier</a></td>";
+                echo "<td><input TYPE='submit' name='Supprimer[$identifiantStage]' value='Supprimer' onclick='return confirmationEtActualisation(\"supprimer\");'></td>";
+                echo "</tr>";
+            }
+            ?>
+            <input type="hidden" value=0 name="supVal" id="supVal">
+        </table>
+    </form>
+</body>
+</html>

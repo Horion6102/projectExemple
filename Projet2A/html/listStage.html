@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/listStage.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Proposition de stage</title>
+</head>
+<body>
+    <div class="div-filter">
+        <form action="" method="GET">
+            <div class="form-text">
+                <p>Quoi :</p><input type="text" name="name" id="name" placeholder="Informatique, developpement, web..."><i class="material-icons">search</i>
+            </div>
+            <div class="form-text">
+                <p>Où :</p><input type="text" name="place" id="place" placeholder="Caen (14000)"><i class="material-icons">place</i>
+            </div>
+            <div class="form-text">
+                <p class="exept">Langage :</p><input type="text" name="lang" id="lang" placeholder="Java, C, SQL, C#..."><i class="material-icons">search</i>
+            </div>
+            <input class="div-filter-search" type="submit" value="Rechercher">
+        </form>
+    </div>
+    <hr class="divider">
+    <div class="div-body">
+        <div class="div-block-left">
+            <?php
+            stageBox($listeStage);
+            ?>
+        </div>
+    </div>
+</body>
+</html>

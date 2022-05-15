@@ -1,4 +1,4 @@
-propositionstages -> Ce dossier contient toutes les sources de mon projet de 2e année, personnellement je me suis occupé presque exclusivement de la structure et le design des
+Projet2A -> Ce dossier contient toutes les sources de mon projet de 2e année, personnellement je me suis occupé presque exclusivement de la structure et le design des
 			   pages, j'ai dû utiliser du php pour faire de l'affichage dynamique de certaines informations.
 
 			   A regarder -> dossier html et css

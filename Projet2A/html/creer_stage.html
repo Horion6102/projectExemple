@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/creer_stage.css">
+    <title>Créer une offre de Stage</title>
+</head>
+
+<body>
+    <div class="global">
+        <div class="div-global">
+            <div class="div-titre">
+                <h1>Creation stage</h1>
+            </div>
+            <div class="div-form">
+                <form method="post" action="./creer_stage.php">
+                    <label for="TitreStage">Titre du stage :</label>
+                    <input type="text" name="TitreStage" value ="<?php if(isset($_POST['TitreStage'])) echo $_POST['TitreStage'];  ?>"  placeholder="Titre">
+                    <label for="DescriptionStage">Description du stage :</label>
+                    <textarea name="DescriptionStage" placeholder="Description"><?php if(isset($_POST['DescriptionStage'])) echo $_POST['DescriptionStage']; ?></textarea>
+                    <?php inputLanguage($nbrlanguage, $ListeLanguage); ?>
+                    <button class="button" type="submit" name="AjouterLanguage" >Ajouter un langage</button>
+                    <button class="button" type="submit" name="RetirerLanguage" >Retirer un langage</button>
+                    <input type="hidden" name="nbrLanguage" value="<?php echo $nbrlanguage?>">
+                    <div class="div-column">
+                        <div>
+                            <label for="EntrepriseStage">Siren entreprise :</label>
+                            <input type="number" name="EntrepriseStage" value="<?php if(isset($_POST['EntrepriseStage'])) echo $_POST['EntrepriseStage']; elseif(isset($siren) && !empty($siren)) echo $siren; ?>" placeholder="siren entreprise">
+                        </div>
+                        <div>
+                            <label for="SiteStage">Siret site :</label>
+                            <input type="number" name="SiteStage" value="<?php if(isset($_POST['SiteStage'])) echo $_POST['SiteStage'];  elseif(isset($_GET['id'])) echo $_GET['id'];?>" placeholder="siret site">
+                        </div>
+                    </div>
+                    <label for="RenumerationStage">Rémunération :</label>
+                    <input type="number" name="RemunerationStage" value="<?php if(isset($_POST['RemunerationStage'])) echo $_POST['RemunerationStage'];?>" >
+                    <label for="AuteurStage">Auteur du stage :</label>
+                    <input type="text" name="AuteurStage" value ="<?php if(isset($_POST['AuteurStage'])) echo $_POST['AuteurStage']; ?>" placeholder="Votre nom" >
+                    <div class="div-column">
+                        <div>
+                            <label for="NumeroDeTelephone">Numéro tel :</label>
+                            <input type="number" name="NumeroDeTelephone" value ="<?php if(isset($_POST['NumeroDeTelephone'])) echo $_POST['NumeroDeTelephone']; ?>" placeholder="0674110645">
+                        </div>
+                        <div>
+                            <label for="EmailStage">Email :</label>
+                            <input type="email" name="EmailStage" value ="<?php if(isset($_POST['EmailStage'])) echo $_POST['EmailStage']; ?>" placeholder="votremail@mail.com">
+                        </div>
+                    </div>
+                    <p><?php if(isset($messageInformation)) echo $messageInformation;?></p>
+                    <button class="button" type="submit" name="creer">Soumettre</button>
+                    <button class="retour" type="submit" name="retour">Retour</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

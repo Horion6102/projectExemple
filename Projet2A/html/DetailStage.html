@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../css/detailStage.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Détail d'un Stage</title>
+	<script src="../js/lib/jquery-3.6.0.js" type="text/javascript"></script>
+	<script>
+
+		function setVisibleListeInscrit(){
+			var listeInscrit = document.getElementById("listeInscrit");
+			var displaySetting = listeInscrit.style.display;
+			if (displaySetting == 'block') {
+			listeInscrit.style.display = 'none';
+			} else {
+				listeInscrit.style.display = 'block';
+			}
+		}
+
+		function inputOnOff(){
+			var label = document.getElementById("labelNbrIns");
+			var input = document.getElementById("inputNbrIns");
+			var displaySetting = label.style.display;
+			if (displaySetting == 'block') {
+			label.style.display = 'none';
+			input.style.display = 'block';
+			} else {
+				label.style.display = 'block';
+				input.style.display = 'none';
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<section class="sec-body">
+		<div class="div-details">
+			<div class="div-details-head">
+				<div class="div-details-title">
+					<h1><?php echo $Stage->getTitreStage(); ?></h1> 
+					<!-- <p class="publié">Publié le :<?php echo $Stage->getDatePublication($identifiantStage); ?></p> -->
+				</div>
+				<div class="div-details-autor">
+					<p>Proposé par : <?php echo $Stage->getAuteurStage(); ?></p>
+				</div>
+			</div>
+			<div class="div-details-body">
+				<div class="div-details-body-description">
+					<h3 class="titre">Description du stage :</h3>
+					<p class="description"><?php echo $Stage->getDescription(); ?></p>
+				</div>
+				<hr>
+				<div class="div-details-body-language">
+					<h3 class="titre">Langage utilisé :</h4>
+					<p class="description"><?php
+						$listeLanguage = $Stage->getLanguageStage();
+						foreach($listeLanguage as $language) {
+                            echo $language.", ";
+                        } ?></p>
+				</div>
+				<hr>
+				<div class="div-details-body-contact-et-autre">
+					<div class="row">
+						<h3 class="titre">Informations suplémentaires</h3>
+						<div class="sub-row">
+							<p class="categorie">Gratification : &nbsp</p><p class="info"><?php echo $Stage->getGratification(); ?> €</p>
+						</div>
+					</div>
+					<div class="row">
+						<h3 class="titre">Contact</h4>
+						<div class="sub-row">
+							<p class="categorie">Téléphone : &nbsp</p><p class="info"><?php echo $Stage->getNumeroTelephone(); ?></p>
+						</div>
+						<div class="sub-row">
+							<p class="categorie">Email : &nbsp</p><p class="info"><?php echo $Stage->getMailContact(); ?></p>
+						</div>
+						<div class="sub-row">
+							<p class="categorie">Adresse : &nbsp</p><p class="info"><?php echo $commune.$Stage->getAdresseSite().", ".$Stage->getCodePostalSite(); ?></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="div-details-footer">
+				<form class="etu" name="detailstage" method="post" >
+					<?php
+					if(isset($stageDejaDemandeParEtudiant)){
+                        if($stageDejaDemandeParEtudiant) echo "<button type=\"submit\" name=\"desinscire\" id=\"desinscire\" value=\"<?php $identifiantStage?>\">Se désinscrire</button>";
+                        else echo "<button type=\"submit\" name=\"inscrire\" id=\"inscrire\" value=\"<?php $identifiantStage?>\">Je suis intéressé</button>";
+                    }
+					?>
+				</form>
+			</div>
+			<?php 
+			if($_SESSION["role"] == "respstage"){
+				formInfoInscrit($Stage);
+			}
+			?>
+		</div>
+	</section>
+
+
+	
+</body>
+</html>

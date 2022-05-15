@@ -1,0 +1,42 @@
+<style>
+    table, th, td {
+        border:1px solid black;
+    }
+</style>
+<form method="post">
+    <table style="width:100%">
+        <tr>
+            <th>Nom Entreprise</th>
+            <th>Lieu du Stage</th>
+            <th>Titre</th>
+            <th>Description</th>
+            <th>Résumé</th>
+            <th>Date Publication</th>
+            <th>Auteur</th>
+            <th>Rémunération</th>
+            <th>Supprimer</th>
+        </tr>
+        <?php
+	foreach($requeteStage->fetchAll() as $a) 
+
+        //while ($a = $requeteStage->fetch())
+        {
+            echo "<tr>";
+            $Siren = $a["SIT_SIREN"];
+            $requeteNomEntreprise = $bdd->query("select * from CONTENIR where SIT_SIREN = $Siren");
+            $b = $requeteNomEntreprise->fetch();
+            $Stage = creeTableauStage($a, $b);
+            echo "<td>$Stage[NomEntreprise]</td>";
+            echo "<td>$Stage[Lieu]</td>";
+            echo "<td><a href=\"stage.php?id=$Stage[Idenfiant]\">$Stage[Titre]</a></td>";
+            echo "<td>$Stage[Description]</td>";
+            echo "<td>$Stage[Resume]</td>";
+            echo "<td>$Stage[DatePublication]</td>";
+            echo "<td>$Stage[Auteur]</td>";
+            echo "<td>$Stage[Remuneration]</td>";
+        echo "<td><input TYPE='submit' name='Supprimer[$identifiantStage]' value='Supprimer'    onclick='return confirmationEtActualisation(\"supprimer\");'></td>";
+            echo "</tr>";
+        }
+        ?>
+    </table>
+</form>

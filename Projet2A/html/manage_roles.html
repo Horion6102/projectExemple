@@ -1,0 +1,28 @@
+<head>
+  <link rel="stylesheet" href="../css/manage_roles.css">
+</head>
+
+<body>
+  <div class="global">
+    <h1 style='color: red;'><?php 
+      if (isset($err) && !empty($err)) {
+        echo $err;
+      }
+    ?></h1>
+
+    <form method="POST">
+      <table>
+        <tr>
+          <th>Identifiant</th>
+          <th>Nom</th>
+          <th>Prénom</th>
+          <th>Email</th>
+          <th>Rôle</th>
+        </tr>
+        <?php
+          echo getTab();
+        ?>
+      </table>
+    </form>
+  </div>
+</body>

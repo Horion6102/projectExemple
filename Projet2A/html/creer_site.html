@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/creer_site.css">
+</head>
+<body>
+    <div class="global">
+        <div class="div-global">
+            <div class="div-titre">
+                <h1>Création d'un site</h1>
+            </div>
+            <div class="div-form">
+                <form method="post">
+                    <label for="SirenEntreprise">Siren de l'entreprise: </label>
+                    <input type="text" name="SirenEntreprise" placeholder="SIREN" <?php if(isset($sirenEntreprise)) echo "value=\"$sirenEntreprise\"";?>>
+                    <?php include_once "./../html/form_Site.html" ?>
+                    <p><?php if(isset($message)) echo $message;?></p>
+                    <button class="button" type="submit" name="Soumettre">Soumettre</button>
+                    <button class="retour" type="submit" name="retour">Retour</button>
+                </form>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

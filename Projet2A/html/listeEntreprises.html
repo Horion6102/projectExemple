@@ -1,0 +1,33 @@
+<head>
+    <link rel="stylesheet" href="../css/listeEntreprise.css">
+    <title>Liste des entreprises</title>
+</head>
+<section class="sec-body">
+    <form method="post">
+        <table style="width:100%">
+            <tr>
+                <th>Nom Entreprise</th>
+                <th>Mail</th>
+                <th>Modifier</th>
+                <th>Supprimer</th>
+            </tr>
+            <?php
+                $listeEntreprise = entreprise::getListeEntreprise();
+                foreach($listeEntreprise as $a){
+                    $SirenEntreprise = $a->getSiren();
+                    $nomEntreprise = $a->getNomEntreprise();
+                    $mailEntreprise = $a->getMail();
+                    echo "<tr>";
+                    echo "<td><a href=\"entreprise.php?id=$SirenEntreprise\">$nomEntreprise</a></td>";
+                    echo "<td>$mailEntreprise</td>";
+                    echo "<td><a href=\"modifier_entreprise.php?id=$SirenEntreprise\">Modifier</a></td>";
+                    echo "<td><input TYPE='submit' name='Supprimer[$SirenEntreprise]' value='Supprimer' onclick='return confirmationEtActualisation(\"supprimer\");'></td>";
+                    echo "</tr>";
+                }
+            ?>
+            <input type="hidden" value=0 name="supVal" id="supVal">
+        </table>
+        <button type="submit" name="retour">Retour</button>
+    </form>
+</section>
+<script src="../js/utils.js"></script>

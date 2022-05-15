@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../../css/login.css">
+        <title>Connexion</title>
+    </head>
+
+    <body>
+        <div class="global">
+            <div class="div-global">
+                <div class="div-titre">
+                    <h1>Se connecter à Proposition Stage</h1>
+                    <?php 
+                    if (!empty($_GET['message'])) {
+                        echo '<h2 style="color: red;font-size: 1em;text-align: center;">'.$_GET['message'].'</h2>';
+                    }
+                    ?>
+                </div>
+                <div class="div-form">
+                    <form method="POST" action="logger.php">
+                        <label for="studentNo">Identifiant :</label>
+                        <input type="text" name="studentNo" value="<?=$studentNo?>"></input>
+
+                        <label for="password">Mot de passe :</label>
+                        <input type="password" name="password"></input>
+
+                        <button type="submit">Se connecter</button>
+                    </form>
+                    <form method="POST" action="login.php">
+                        <button type="submit" name="retour">Retour</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="get">
+        <table style="width:100%">
+            <tr>
+                <th>Nom Entreprise</th>
+                <th>Titre</th>
+                <th>Description</th>
+                <th>Auteur</th>
+                <th>Gratification</th>
+                <th>Adresse</th>
+                <th>Code Postal</th>
+                <th>Pays</th>
+                <th>Modifier</th>
+                <th>Supprimer</th>
+            </tr>
+            <?php
+        foreach ($listeStage as $a){
+            $identifiantStage = $a->getIdentifiantStage();
+            $titreStage = $a->getTitreStage();
+            $description = $a->getDescription();
+            $auteurStage = $a->getAuteurStage();
+            $gratification = $a->getGratification();
+            $Site = Site::getSiteParId($a->getSiretSite());
+            $adresseSite = $Site->getRue();
+            $codePostalSite = $Site->getCodePostal();
+            $PaysSite = $Site->getPays();
+            $Entreprise = Entreprise::getEntrepriseParSite($Site);
+            $nomEntreprise = $Entreprise->getNomEntreprise();
+            echo "<tr>";
+            echo "<td>$nomEntreprise</td>";
+            echo "<td>$titreStage</td>";
+            echo "<td>$description</td>";
+            echo "<td>$auteurStage</td>";
+            echo "<td>$gratification</td>";
+            echo "<td>$adresseSite</td>";
+            echo "<td>$codePostalSite</td>";
+            echo "<td>$PaysSite</td>";
+            echo "<td><a href=\"modifier_stage.php?id=$identifiantStage\">Modifier</a></td>";
+            echo "<td><input TYPE='submit' name='Supprimer[$identifiantStage]' value='Supprimer'></td>";
+
+            echo "</tr>";
+            }
+            ?>
+        </table>
+    </form>
+</body>
+<script src="../js/utils.js"></script>
+</html>

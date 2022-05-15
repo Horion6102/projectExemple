@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/entreprise.css">
+    <title>Liste de vos sites</title>
+</head>
+<script src="../js/utils.js"></script>
+<body>
+    <section class="sec-head">
+        <h3>Infos entreprise</h3>
+        <div class="row">
+            <p class="left">Nom entreprise :&nbsp</p><p class="center"><?php echo $nomEntreprise ?></p>
+        </div>
+        <div class="row">
+            <p class="left">Mail entreprise :&nbsp</p><p class="center"><?php echo $mailEnterprise ?></p>
+        </div>
+        <hr>
+        <div class="row-button">
+            <a class="left-a" href="https://dev-propstage.users.info.unicaen.fr/php/creer_site.php?id=<?php echo $identifiantEntreprise;?>">Ajouter un site</a>
+            <?php
+            if(isset($_SESSION['role'])){
+                echo '<a class="right-a" href="listeEntreprises.php">Retour</a>';
+            } else {
+                echo '<a class="right-a" href="connexionEntreprise.php">Deconnexion</a>';
+            }
+            ?>
+        </div>
+    </section>
+    <section class="sec-body">
+        <form method="post">
+            <table>
+                <tr>
+                    <th>Nom de l'établissement :</th>
+                    <th>Commune :</th>
+                    <th>Code Postal Site :</th>
+                    <th>Rue :</th>
+                    <th>Pays :</th>
+                    <th>Supprimer :</th>
+                    <th>Modifier :</th>
+                </tr>
+            <?php
+                foreach ($listeSite as $a) {
+                    echo "<tr>";
+                    $siret = $a->getSiret();
+                    $commune = $a->getCommune();
+                    $codePostal = $a->getCodePostal();
+                    $Rue = $a->getRue();
+                    $Pays = $a->getPays();
+                    $nom = $a->getNom();
+                    echo "<td><a href=\"listeStageSite.php?id=$siret\">$nom</a></td>";
+                    echo "<td>$commune</td>";
+                    echo "<td>$codePostal</td>";
+                    echo "<td>$Rue</td>";
+                    echo "<td>$Pays</td>";
+                    echo "<td><input TYPE='submit' name='Supprimer[$siret]' value='Supprimer' onclick='return confirmationEtActualisation(\"supprimer\");'></td>";
+                    echo "<td><a href=\"modifier_site.php?id=$siret\">Modifier</a></td>";
+                    echo "</tr>";
+                }
+            ?>
+            <input type="hidden" value=0 name="supVal" id="supVal">
+            </table>
+        </form>
+    </section>
+</body>
+</html>

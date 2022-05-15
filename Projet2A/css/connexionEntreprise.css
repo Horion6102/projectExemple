@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --footer-color-secondary : #00c3ff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+    background-color: var(--footer-color-secondary);
+}
+
+.div-global {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.div-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: fit-content;
+    width: 600px;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.692);
+    transition: all 150ms ease-in;
+}
+
+.div-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.div-text a {
+   color: black;
+   text-decoration: none;
+   display: inline-block;
+   padding: 12px 0px 12px 0px;
+   margin: 5px;
+   background-color: #dbdbdb;
+   width: 30%;
+   text-align: center;
+   border-radius: 15px;
+   font-size: 1em;
+   font-weight: 600;
+   transition: all 150ms ease-in;
+}
+
+.div-text a:hover{
+    background-color: var(--footer-color-secondary);
+    cursor: pointer;
+}
+
+.div-text input {
+    height: 45px;
+    background-color: #dbdbdb;
+    border: none;
+    border-radius: 15px;
+    width: fill;
+}
+
+.div-text input:-internal-autofill-selected {
+    background-color: black;
+}
+
+.div-text button {
+    margin: auto;
+    width: 30%;
+    height: 45px;
+    background-color: #dbdbdb;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: 600;
+    transition: all 150ms ease-in;
+    font-family: "Roboto";
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.div-text button:hover {
+    background-color: var(--footer-color-secondary);
+    cursor: pointer;
+}
+
+
+
