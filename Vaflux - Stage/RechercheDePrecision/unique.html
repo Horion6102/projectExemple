@@ -1,0 +1,13 @@
+<center>
+    <h2>CriNatiC</h2>
+    <h4>Outil de Croisement des risques naturels et des ICPE</h4>
+    <form action="choixAleas.php" method="post">
+        <input type="text" value="unique" name="type" hidden>
+        <div>
+            <h3>Recherche unitaire d'une ICPE :</h3>
+            <label for="adr">Par son identifiant AIOT : </label><input placeholder="XXXX.XXXXX" type="text" name="icpe">
+            <p style="color: red;"><?php echo $err; ?></p>
+        </div>
+        <input type="submit" name="submit" value="Etape suivante">
+    </form>
+</center>

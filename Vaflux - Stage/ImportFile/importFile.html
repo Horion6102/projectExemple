@@ -1,0 +1,10 @@
+<center>
+    <form action="traitementSQL.php" method="post" enctype="multipart/form-data">
+        <label for="zip_file">Impotez un fichier SQL</label>
+        <br><br>
+        <input type="file" name="zip_file" accept=".sql">
+        <br><br>
+        <input type="submit" name="submit" value="Importer">
+        <p style="color: rgb(219, 0, 0);"><?php if(isset($error))echo $error; ?></p>
+    </form>
+</center>

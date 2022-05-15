@@ -1,0 +1,20 @@
+<center>
+    <form action="result.php" method="post">
+        <h2>ICPE choisie : <?php echo $icpe ?></h2>
+        <input type="hidden" name="icpe" value="<?php echo $icpe ?>">
+        <input type="hidden" name="type" value="<?php echo $type ?>">
+        <h3>Sélection des aléas naturels (sources : cartes et atlas DREAL)</p>
+        <h4>Inondations</h4>
+        <input type="checkbox" name="inondation[]" value="debordement" id="deb"><label for="deb">Débordement de cours d'eau</label>
+        <input type="checkbox" name="inondation[]" value="submersion" id="sub" disabled><label for="sub">Submersion marine</label>
+        <input type="checkbox" name="inondation[]" value="nappe" id="nap" disabled><label for="nap">Remontée de nappe phréatique</label>
+        <h4>Chute de blocs</h4>
+        <input type="checkbox" name="chuteDeBlocs" value="chuteDeBlocs" id="chu" disabled><label for="chu">Prédisposition aux chutes de blocs rocheux</label>
+        <h4>Cavités souterraines</h4>
+        <input type="checkbox" name="cavites" value="cavites" id="cav"><label for="cav">Présence de cavités souterraines</label>
+        <h4>Plan de prévention des risques naturels</h4>
+        <input type="checkbox" name="pprn" value="pprn" id="pprn"><label for="pprn">PPRN</label>
+        <br>
+        <br><input type="submit" name="submit" value="Rechercher">
+    </form>
+</center>

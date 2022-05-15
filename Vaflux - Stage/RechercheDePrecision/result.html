@@ -1,0 +1,55 @@
+<style>
+    #map {
+        margin-left: 2%;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body onload="init()">
+    <center>
+        <input id="Lng" type="text" value="<?php echo $icpeLng ?>" hidden>
+        <input id="Lat" type="text" value="<?php echo $icpeLat ?>" hidden>
+        <input id="aleas" type="text" value="<?php echo $aleas ?>" hidden>
+        <h2>CriNatiC</h2>
+        <h4>Outil de Croisement des risques naturels et des ICPE</h4>
+        <table>
+            <thead>
+                <tr>
+                    <td><b>ICPE</b></td>
+                    <td>PPRN<span data-tooltip="CRiNatIC renseigne sur la présence ou non d’un PPRN" class="material-symbols-outlined info">info</span></td>
+                    <td>Debordement de cours d'eau<span data-tooltip="Pour cet aléa, la source des données est l’atlas des zones inondables, qui identifie les zones soumises à un aléa par débordement de cours d’eau pour un événement hydrologique d’ordre centennal." class="material-symbols-outlined info">info</span></td>
+                    <td>Submersion marine<span data-tooltip="La vulnérabilité face aux submersions marines est évaluée sur la base de l’atlas des zones sous le niveau marin. Cet atlas cartographie l’ensemble des territoires topographiquement situés sous un niveau marin de référence."  class="material-symbols-outlined info">info</span></td>
+                    <td>Remontée de nappe phréatique<span data-tooltip="La vulnérabilité face aux remontées de nappes phréatiques est évaluée sur la base de l’atlas des profondeurs de la nappe phréatique en période de très hautes eaux." class="material-symbols-outlined info">info</span></td>
+                    <td>Predisposition aux chutes de block rocheux<span data-tooltip="CRiNatIC remonte toutes les zones identifiées dans la carte de prédisposition aux chutes de blocs rocheux." class="material-symbols-outlined info">info</span></td>
+                    <td>Presence de cavités souterraines<span data-tooltip="CRiNatIC remonte les zones identifiées dans l’atlas régional des indices de cavité souterraine concernées." class="material-symbols-outlined info">info</span></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="width: fit-content;"><b><?php echo $icpeAdr ?></b></td>
+                    <td style="color: <?php echo $pprnColor; ?>;"><?php echo $pprnMsg ?></td>
+                    <td style="color: <?php echo $ziColor; ?>;"><?php echo $ziMsg ?></td>
+                    <td>Non évalué !</td>
+                    <td>Non évalué !</td>
+                    <td>Non évalué !</td>
+                    <td style="color: <?php echo $cavColor; ?>;"><?php echo $cavMsg ?></td>
+                </tr>
+            </tbody>
+
+        </table>
+    </center>
+    
+    <div id="map"></div>
+</body>

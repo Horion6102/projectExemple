@@ -1,0 +1,21 @@
+<head>
+    <meta charset="UTF-8">
+</head>
+<center>
+    <p style="color: red;">Cette categorie est toujours en developpement !</p>
+    <div>
+        <h2>CriNatiC</h2>
+        <h4>Outil de Croisement des risques naturels et des ICPE</h4>
+        <br>
+        <form action="selectTypeOfSearch.php" method="post">
+            <label>Type de recherche : </label>
+            <select name="type" id="" required>
+                <option value="unique">Recherche unitaire d'une ICPE</option>
+                <option value="departement">Recherche des ICPE d'un département</option>
+                <option value="service" disabled>Recherche des ICPE par service de Controle</option>
+            </select>
+            <br><br>
+            <input type="submit" name="submit" value="Etape suivante">
+        </form>
+    </div>
+</center>

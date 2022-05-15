@@ -1,0 +1,17 @@
+<center>
+    <h2>CriNatiC</h2>
+    <h4>Outil de Croisement des risques naturels et des ICPE</h4>
+    <form action="choixAleas.php" method="post">
+        <input type="text" value="departement" name="type" hidden>
+        <div>
+            <h3>Recherche des ICPE d'un département :</h3>
+            <input type="radio" name="departement[]" value="Calvados"><label>Calvados</label>
+            <input type="radio" name="departement[]" value="Eure"><label>Eure</label>
+            <input type="radio" name="departement[]" value="Manche"><label>Manche</label>
+            <input type="radio" name="departement[]" value="Orne"><label>Orne</label>
+            <input type="radio" name="departement[]" value="Seine-Maritime"><label>Seine-Maritime</label>
+        </div>
+        <p style="color: red;"><?php echo $err; ?></p>
+        <input type="submit" name="submit" value="Etape suivante">
+    </form>
+</center>

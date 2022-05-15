@@ -1,0 +1,19 @@
+<center>
+    <h2>CriNatiC</h2>
+    <h4>Outil de Croisement des risques naturels et des ICPE</h4>
+    <form action="choixAleas.php" method="post">
+        <input type="text" value="service" name="type" hidden>
+        <div>
+            <h3>Recherche des ICPE par service de Controle</h3>
+            <div>
+                <p><strong>Dreal :</strong></p>
+                <input type="radio" name="dreal[]" value="UBDCM"><label>UBDCM</label>
+                <input type="radio" name="dreal[]" value="UBDEO"><label>UBDEO</label>
+                <input type="radio" name="dreal[]" value="UDH"><label>UDH</label>
+                <input type="radio" name="dreal[]" value="UDRD"><label>UDRD</label>
+            </div>
+        </div>
+        <p style="color: red;"><?php echo $err; ?></p>
+        <input type="submit" name="submit" value="Etape suivante">
+    </form>
+</center>
